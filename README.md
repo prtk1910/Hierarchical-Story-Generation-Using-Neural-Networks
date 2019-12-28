@@ -15,3 +15,4 @@ python train.py
 Then change the required prompt in the multipara.py file and run it to generate a multiple paragraph story.
 
 Parameters in the train.py, sample.py and multipara.py files may be changed as per requirements.
+
