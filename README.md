@@ -3,13 +3,15 @@ Generating stories consisting of multiple paragprahs using a word-RNN model trai
 
 The word-rnn model used is a modified version of Tensorflow's char-rnn (https://github.com/sherjilozair/char-rnn-tensorflow).
 
-We trained this on a corpus of text containing all of Sir Arthur Conan Doyle's work for 50 epochs.
+We trained this on a corpus of text containing all of Sir Arthur Conan Doyle's work for 100 epochs.
 
-The input for the first paragraph must be given, following which the second paragraph uses the last complete sentence of the generated first paragraph.
+The input for the first paragraph must be given, following which the second paragraph uses the last complete sentence of the generated first paragraph. Sentiment tokens for the respective paragraphs can be specified in order to make the story follow a pre-selected theme.
 
 # Sample output:
 
 Prompt: As he walked into the street he was afraid of what might happen to him.
+
+Theme: Mystery
 
 Output:
 
