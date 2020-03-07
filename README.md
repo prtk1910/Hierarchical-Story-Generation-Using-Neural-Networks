@@ -5,7 +5,7 @@ The word-rnn model used is a modified version of Tensorflow's char-rnn (https://
 
 We trained this on a corpus of text containing all of Sir Arthur Conan Doyle's work for 100 epochs.
 
-The input for the first paragraph must be given, following which the second paragraph uses the last complete sentence of the generated first paragraph. Sentiment tokens for the respective paragraphs can be specified in order to make the story follow a pre-selected theme.
+The input for the first paragraph must be given, following which the second paragraph uses the last complete sentence of the generated first paragraph. The story is made to follow a pre-selected theme based on customizable sentiment tokens for each paragraph.
 
 # Sample output:
 
