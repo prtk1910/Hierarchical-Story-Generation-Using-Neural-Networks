@@ -106,10 +106,27 @@ classifier = NaiveBayesClassifier.train(train_data)
     
 #Code for multi-para story generation
     
+
+theme=str(input("Enter theme - Mystery, Thriller, Happy, Tragedy : "))
+if theme=='Mystery':
+	sentToken1='Negative'
+	sentToken2='Positive'
+elif theme=='Thriller':
+	sentToken2='Negative'
+	sentToken1='Positive'
+elif theme=='Happy':
+	sentToken1='Positive'
+	sentToken2='Positive'
+elif theme=='Tragedy':
+	sentToken1='Negative'
+	sentToken2='Negative'
+else:
+	print('Invalid option selected')
+
 #input prompt
 ip1='As he walked down the street, Watson knew that his day would be eventful.'
 print("1st para prompt:", ip1)
-sentToken=str(input("Enter required sentiment for 1st para (Positive or Negative): "))
+#sentToken1=str(input("Enter required sentiment for 1st para (Positive or Negative): "))
 print()
 
 bad_chars = ['  ', '\n', '\r'] 
@@ -124,7 +141,7 @@ while(True):
     out=out.replace("'", "")
     out=out.replace("b", "", 1)
     out=out.strip()
-    flag=checkSent(out, sentToken)
+    flag=checkSent(out, sentToken1)
     if flag==1:
         print(out, flush="True")
         break
@@ -142,7 +159,7 @@ ip2=ip3+ip2
 print()
 print("2nd para prompt:", ip2)
 
-sentToken=str(input("Enter required sentiment for 2nd para (Positive or Negative): "))
+#sentToken2=str(input("Enter required sentiment for 2nd para (Positive or Negative): "))
 print()
 
 
@@ -157,7 +174,7 @@ while(True):
     out2=out2.replace("b", "", 1)
     out2=out2.replace(ip2, '')
     out2=out2.strip()
-    flag=checkSent(out2, sentToken)
+    flag=checkSent(out2, sentToken2)
     if flag==1:
         print(out2, flush="True")
         break
