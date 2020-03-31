@@ -1,5 +1,5 @@
 # Hierarchical Story Generation Using Neural Networks
-Generating stories consisting of multiple paragprahs using a word-RNN model trained on a corpus consisting of several short stories.
+Generating stories consisting of multiple paragprahs using a LSTM trained on a corpus consisting of several short stories.
 
 The word-rnn model used is a modified version of Tensorflow's char-rnn (https://github.com/sherjilozair/char-rnn-tensorflow).
 
