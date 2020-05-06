@@ -7,6 +7,8 @@ We trained this on a corpus of text containing all of Sir Arthur Conan Doyle's w
 
 The input for the first paragraph must be given, following which the second paragraph uses the last complete sentence of the generated first paragraph. The story is made to follow a pre-selected theme based on customizable sentiment tokens for each paragraph.
 
+The model is deployed via Flask.
+
 # Sample output:
 
 Prompt: As he walked into the street he was afraid of what might happen to him.
